@@ -6,11 +6,11 @@ files:
     
 hooks:
   BeforeInstall:
-    - location: TEST/scripts/clean_html_directory.sh
+    - location: scripts/clean_html_directory.sh
       timeout: 300
       runas: root
 
   AfterInstall:
-    - location: TEST/scripts/restart_server.sh
+    - location: scripts/restart_server.sh
       timeout: 300
       runas: root

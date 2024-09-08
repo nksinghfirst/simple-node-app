@@ -1,16 +1,16 @@
 version: 0.0
 os: linux
 files:
-  - source: /build/
+  - source: TEST/build/
     destination: /var/www/html/
     
 hooks:
   BeforeInstall:
-    - location: scripts/clean_html_directory.sh
+    - location: TEST/scripts/clean_html_directory.sh
       timeout: 300
       runas: root
 
   AfterInstall:
-    - location: scripts/restart_server.sh
+    - location: TEST/scripts/restart_server.sh
       timeout: 300
       runas: root

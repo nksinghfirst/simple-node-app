@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html
-
+  - source: /build/
+    destination: /var/www/html/
+    
 hooks:
   BeforeInstall:
     - location: scripts/clean_html_directory.sh
